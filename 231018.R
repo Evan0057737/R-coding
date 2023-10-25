@@ -26,7 +26,7 @@ grades_list <- list(
 grades[["student"]]
 grades[["midterm"]]
 grades$final
-
+grades_list$student[c(1,3)]
 
 grades[, "student"]
 # retrieve student column
@@ -35,8 +35,7 @@ grades[, c("student", "midterm")]
 grades[c(1,3), "student"]
 # retrieve student column for rows 1 and 3
 grades[c(1,3), c("student", "midterm")]
-# retrieve student and midterm columns for rows 1 and 3
-install.packages("dplyr")
+# retrieve student and midterm columns for rows 1 and 3)
 #glimpse our data
 dplyr::glimpse(flightsData)
 flightsData[,c("AirlineID","ArrivalTime")]
@@ -84,11 +83,21 @@ ord_fct_householdIncome <- ordered(householdIncomes, levels = c("low income", "m
 
 class(fct_householdIncome)
 
+
 ord_fct_householdIncome[[1]]
 householdIncomes[[1]] < "high income"
 ord_fct_householdIncome[[1]]
 ord_fct_householdIncome[[1]]<"high income"
+# Counts on each level
+table(fct_householdIncome)
+table(ord_fct_householdIncome)
 
+# Proportion on each level
+tb_fct_householdIncome <- table(fct_householdIncome)
+prop.table(tb_fct_householdIncome)
+
+tb_ord_fct_householdIncome <- table(ord_fct_householdIncome)
+prop.table(tb_ord_fct_householdIncome)
 #parse Airline ID
 class(flightsData$AirlineID)
 factor(flightsData$AirlineID)
