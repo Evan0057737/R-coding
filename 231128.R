@@ -6,6 +6,9 @@ insurance <- jsonlite::fromJSON("data/insurance.json")
 die <- jsonlite::fromJSON("data/225684.json")
 air <- jsonlite::fromJSON("data/air.json")
 money <- jsonlite::fromJSON("data/company.json")
+metro <- jsonlite::fromJSON("data/metro.json")
+
+train<- jsonlite::fromJSON("data/train.json")
 
 library(jsonlite)
 library(dplyr)
